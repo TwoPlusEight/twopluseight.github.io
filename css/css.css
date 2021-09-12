@@ -15,6 +15,7 @@
     .bottomStyle:hover {
       background-color: #e5f1fb;
       border: 1px solid #0078d7;
+      cursor: default;
       display:inline-block;
       font-size: 14px;
       font-weight: 400;
