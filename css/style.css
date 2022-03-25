@@ -1,0 +1,216 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Google Sans", "Microsoft YaHei UI", sans-serif;
+    cursor: url(/cursor/pointer.ani), default;
+}
+
+.container {
+}
+
+.container .title {
+    min-height: 400px;
+    /*height: 100vh;*/
+    height: calc(100vh - 136px);
+    display: flex;
+    font-size: 60px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.container .title .btn-list {
+    margin-top: 50px;
+    font-size: 0.25em;
+}
+
+.container .title .btn-list .btn {
+    margin: 0 5px 0 5px;
+    border-radius: 7px;
+    padding: 8px 32px;
+    color: white;
+    background-color: #e91e63;
+    transition: background-color .3s cubic-bezier(.68, 0, .4, 1);
+}
+
+@media only screen and (min-width: 500px) and (max-width: 610px) {
+    .container .title .btn-list {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        font-size: 0.25em;
+    }
+
+    .container .title .btn-list .btn {
+        margin: 5px 0 5px 0;
+    }
+}
+
+.container .title .btn:hover {
+    color: white;
+    background-color: #be1e53;
+    transition: background-color .3s cubic-bezier(.68, 0, .4, 1);
+}
+
+body .bgpic {
+    flex-direction: column;
+    z-index: -1;
+    background-position: center center;
+    background-size: cover;
+}
+
+body .bgpic::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    /*background: url("https://s2.loli.net/2021/12/26/3gOQ2oSbumqjcLp.jpg") no-repeat center center;*/
+    background: url(/img/background.jpg) no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(1px);
+}
+
+.topnav {
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: #ffffff;
+}
+
+.topnav .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 50px;
+    font-size: 26px;
+}
+
+a {
+    text-decoration: none;
+    cursor: url(/cursor/link.cur), pointer;
+}
+
+.topnav .title a {
+    transition: color 0.3s cubic-bezier(.68, 0, .4, 1);
+    color: black;
+}
+
+.topnav .title a:hover {
+    transition: color 0.3s cubic-bezier(.68, 0, .4, 1);
+    color: #74b6fa;
+}
+
+div {
+    z-index: 1;
+}
+
+footer {
+    color: #999;
+    padding: 30px 0 30px;
+    text-align: center;
+    background-color: #323437;
+}
+
+footer .container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+footer .container .siteInfo .foot-title {
+    margin: 0px 20px 0px 20px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .container .siteInfo a {
+    text-decoration: underline;
+    color: rgba(255, 255, 255, 0.71);
+    transition: color 0.3s cubic-bezier(.68, 0, .4, 1);
+}
+
+footer .container .siteInfo a:hover {
+    transition: color 0.3s cubic-bezier(.68, 0, .4, 1);
+    color: #74b6fa;
+}
+
+footer .container .siteInfo .cdn_ip {
+    font-size: 14px;
+    color: #838383;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px 20px 0px 20px;
+}
+
+footer .container .siteInfo .link-list {
+    font-size: 14px;
+    color: #838383;
+    text-align: center;
+    margin: 0px 20px 0px 20px;
+}
+
+::-webkit-scrollbar {
+    background: rgba(0, 0, 0, 0.1);
+    height: 9px;
+    width: 9px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+::selection {
+    color: #ffffff;
+    background-color: #00ffe4;
+}
+
+.special-heading-inner-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 2em;
+    position: relative
+}
+
+.be-border {
+    position: absolute;
+    width: 0;
+    height: 2em;
+    transition: width .3s ease;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 0.3em;
+}
+
+.be-title {
+    position: relative;
+    line-height: 1em;
+    transition: color .3s ease;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.be-border-style1.be-expand:hover .be-border {
+    width: 100%
+}
+
+.special-heading-inner-wrap:hover {
+    color: #ffffff
+}
+
+.be-title.plan-group-title {
+    font-family: "Google Sans", "Microsoft YaHei UI", sans-serif;
+    font-size: 70px
+}
